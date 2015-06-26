@@ -1,13 +1,12 @@
 //
 //  AppDelegate.h
-//  Selected(Button)
+//  LangcadeCameraDemo
 //
-//  Created by LJ on 15/4/14.
+//  Created by LJ on 15/5/14.
 //  Copyright (c) 2015年 广东道一信息科技有限公司. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "KeyboradManagement.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

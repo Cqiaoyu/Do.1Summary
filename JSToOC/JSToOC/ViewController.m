@@ -29,7 +29,25 @@
     [web loadHTMLString:content baseURL:baseURl];
     [self.view addSubview:web];
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGRect frame = {{10,100},{100,30}};
+    button.frame = frame;
+    [button setTitle:@"选择" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    button.backgroundColor = [UIColor redColor];
+    [button addTarget:self action:@selector(sckipToSetting:) forControlEvents:UIControlEventTouchUpInside];
+    [button setBackgroundImage:[UIImage imageNamed:@"btn_未选中01.png"] forState:UIControlStateNormal];
+    [web addSubview:button];
+    
     datas = @[@"dkfjsdjfldjlfjsljfldjfljsljflsjldfjldjfljsdf",@"忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘记来忘来",@"374837493",@"00",@"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"];
+}
+- (void)sckipToSetting:(id)sender{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+    UIButton *button = (UIButton *)sender;
+    button.selected = YES;
+}
+- (IBAction)testAction:(id)sender {
+    _btnTest.selected = YES;
 }
 
 - (void)didReceiveMemoryWarning {

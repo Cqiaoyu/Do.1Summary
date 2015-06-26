@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  Selected(Button)
+//  ExceptionTest
 //
-//  Created by LJ on 15/4/14.
+//  Created by LJ on 15/5/13.
 //  Copyright (c) 2015年 广东道一信息科技有限公司. All rights reserved.
 //
 
@@ -17,8 +17,42 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [KeyboradManagement management];
+    
+    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+    
+    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"bugReport"];
+    [self sendBugReportWithFilePath:path];
+    
     return YES;
+}
+
+void UncaughtExceptionHandler(NSException * exception){
+    NSArray *callStack = [exception callStackSymbols];
+    NSString *reason = [exception reason];
+    NSString *name = [exception name];
+    NSString *callStackStr = nil;
+    for (NSString *str in callStack) {
+        callStackStr = [NSString stringWithFormat:@"%@%@\n",callStackStr,str];
+    }
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.dateFormat = @"yyyy-MM-dd hh:mm:ss";
+    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
+    NSString *reporter = [NSString stringWithFormat:@"%@\n%@\n%@\n\n%@",dateStr,name,reason,callStackStr];
+    NSError *error = nil;
+    [reporter writeToFile:[NSTemporaryDirectory() stringByAppendingPathComponent:@"bugReport"] atomically:YES encoding:NSUTF8StringEncoding error:&error];
+}
+
+- (void)sendBugReportWithFilePath:(NSString *)path{
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        //
+        NSString *bug = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        NSString *from = @"cenkh@outlook.com";
+        NSString *to = @"1250578320@qq.com";
+        NSString *urlStr = [NSString stringWithFormat:@"mailto:%@?cc=%@&subject=bug报告!&body=%@",to,from,bug];
+        urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

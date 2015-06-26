@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  Selected(Button)
+//  LangcadeCameraDemo
 //
-//  Created by LJ on 15/4/14.
+//  Created by LJ on 15/5/14.
 //  Copyright (c) 2015年 广东道一信息科技有限公司. All rights reserved.
 //
 
@@ -17,7 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [KeyboradManagement management];
     return YES;
 }
 

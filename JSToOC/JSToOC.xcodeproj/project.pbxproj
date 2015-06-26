@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2ABC39CE1B02E4850023BAD4 /* btn_未选中01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABC39CD1B02E4850023BAD4 /* btn_未选中01@2x.png */; };
 		2AC3D10B1AFC684D002812CD /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2AC3D10A1AFC684D002812CD /* index.html */; };
 		2AC419B01AFAFD2E00AA48D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC419AF1AFAFD2E00AA48D3 /* main.m */; };
 		2AC419B31AFAFD2E00AA48D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC419B21AFAFD2E00AA48D3 /* AppDelegate.m */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2ABC39CD1B02E4850023BAD4 /* btn_未选中01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_未选中01@2x.png"; sourceTree = "<group>"; };
 		2AC3D10A1AFC684D002812CD /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2AC419AA1AFAFD2E00AA48D3 /* JSToOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSToOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC419AE1AFAFD2E00AA48D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				2AC419B21AFAFD2E00AA48D3 /* AppDelegate.m */,
 				2AC419B41AFAFD2E00AA48D3 /* ViewController.h */,
 				2AC419B51AFAFD2E00AA48D3 /* ViewController.m */,
+				2ABC39CD1B02E4850023BAD4 /* btn_未选中01@2x.png */,
 				2AC419B71AFAFD2E00AA48D3 /* Main.storyboard */,
 				2AC419BA1AFAFD2E00AA48D3 /* Images.xcassets */,
 				2AC419BC1AFAFD2E00AA48D3 /* LaunchScreen.xib */,
@@ -205,6 +208,7 @@
 				2AC419B91AFAFD2E00AA48D3 /* Main.storyboard in Resources */,
 				2AC3D10B1AFC684D002812CD /* index.html in Resources */,
 				2AC419BE1AFAFD2E00AA48D3 /* LaunchScreen.xib in Resources */,
+				2ABC39CE1B02E4850023BAD4 /* btn_未选中01@2x.png in Resources */,
 				2AC419BB1AFAFD2E00AA48D3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

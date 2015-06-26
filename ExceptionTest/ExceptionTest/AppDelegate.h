@@ -1,13 +1,12 @@
 //
 //  AppDelegate.h
-//  Selected(Button)
+//  ExceptionTest
 //
-//  Created by LJ on 15/4/14.
+//  Created by LJ on 15/5/13.
 //  Copyright (c) 2015年 广东道一信息科技有限公司. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "KeyboradManagement.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

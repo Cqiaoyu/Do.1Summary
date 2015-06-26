@@ -17,7 +17,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ir-ki-VZF">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="273" y="283" width="55" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="QlV-jq-ZTk"/>
+                                    <constraint firstAttribute="height" constant="35" id="jCG-uo-KC2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="是" image="radio_off.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,14 +30,16 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="153" y="154" width="72" height="37"/>
                                 </variation>
+                                <connections>
+                                    <action selector="assertTestAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XQf-fH-LbY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="3ir-ki-VZF"/>
-                            </mask>
-                        </variation>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="3ir-ki-VZF" secondAttribute="centerY" id="29z-OF-N6j"/>
+                            <constraint firstAttribute="centerX" secondItem="3ir-ki-VZF" secondAttribute="centerX" id="3jC-is-jYZ"/>
+                        </constraints>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3ir-ki-VZF"/>
@@ -43,6 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="412" y="228"/>
         </scene>
     </scenes>
     <resources>
