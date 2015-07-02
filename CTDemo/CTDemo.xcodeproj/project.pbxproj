@@ -25,6 +25,20 @@
 			remoteGlobalIDString = 2AC365841B43BBC600119E56;
 			remoteInfo = CTDemo;
 		};
+		2AC986C51B45110F00E11FCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AC986C01B45110C00E11FCA /* WorkSpaceDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2AC986971B45110C00E11FCA;
+			remoteInfo = WorkSpaceDemo;
+		};
+		2AC986C71B45110F00E11FCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AC986C01B45110C00E11FCA /* WorkSpaceDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2AC986B01B45110C00E11FCA;
+			remoteInfo = WorkSpaceDemoTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +58,7 @@
 		2AC365AE1B43C78A00119E56 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		2AC986881B44CFAA00E11FCA /* CTDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTDemo-Prefix.pch"; sourceTree = "<group>"; };
 		2AC9868D1B44E08300E11FCA /* MacroDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefines.h; sourceTree = "<group>"; };
+		2AC986C01B45110C00E11FCA /* WorkSpaceDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WorkSpaceDemo.xcodeproj; path = WorkSpaceDemo/WorkSpaceDemo.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +83,7 @@
 		2AC3657C1B43BBC600119E56 = {
 			isa = PBXGroup;
 			children = (
+				2AC986C01B45110C00E11FCA /* WorkSpaceDemo.xcodeproj */,
 				2AC365AE1B43C78A00119E56 /* CoreTelephony.framework */,
 				2AC365871B43BBC600119E56 /* CTDemo */,
 				2AC365A11B43BBC700119E56 /* CTDemoTests */,
@@ -125,6 +141,15 @@
 				2AC365A31B43BBC700119E56 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AC986C11B45110C00E11FCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AC986C61B45110F00E11FCA /* WorkSpaceDemo.app */,
+				2AC986C81B45110F00E11FCA /* WorkSpaceDemoTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +219,12 @@
 			mainGroup = 2AC3657C1B43BBC600119E56;
 			productRefGroup = 2AC365861B43BBC600119E56 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2AC986C11B45110C00E11FCA /* Products */;
+					ProjectRef = 2AC986C01B45110C00E11FCA /* WorkSpaceDemo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2AC365841B43BBC600119E56 /* CTDemo */,
@@ -201,6 +232,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2AC986C61B45110F00E11FCA /* WorkSpaceDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = WorkSpaceDemo.app;
+			remoteRef = 2AC986C51B45110F00E11FCA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2AC986C81B45110F00E11FCA /* WorkSpaceDemoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = WorkSpaceDemoTests.xctest;
+			remoteRef = 2AC986C71B45110F00E11FCA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2AC365831B43BBC600119E56 /* Resources */ = {
@@ -357,7 +405,7 @@
 				INFOPLIST_FILE = CTDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -369,7 +417,7 @@
 				INFOPLIST_FILE = CTDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

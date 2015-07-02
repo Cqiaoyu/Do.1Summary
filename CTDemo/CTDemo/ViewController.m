@@ -6,9 +6,10 @@
 //  Copyright (c) 2015年 广东道一信息科技有限公司. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ViewController.h" 
 
-@interface ViewController ()
+
+@interface ViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -33,12 +34,27 @@
     NSData *data = [[NSData alloc] initWithBytes:[[path dataUsingEncoding:NSUTF8StringEncoding] bytes] length:[path length]];
     [data writeToFile:SAVEFILE(@"text.txt") atomically:YES];
     
+    UITextField *field = [[UITextField alloc]initWithFrame:CGRectMake(21, 55, 100, 30)];
+    field.delegate = self;
+    field.borderStyle = UITextBorderStyleRoundedRect;
+    [self.view addSubview:field];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardHide:) name:UIKeyboardDidHideNotification object:nil];
+}
+- (void)viewDidDisappear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    DEBUG_LOG(@"开始");
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    DEBUG_LOG(@"结束");
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) keyboardHide:(NSNotification *)noti{
+    DEBUG_LOG(@"隐藏");
     
 }
 
