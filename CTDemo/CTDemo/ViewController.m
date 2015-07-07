@@ -32,7 +32,16 @@
     NSString *path = DOCUMENTPATH;
     
     NSData *data = [[NSData alloc] initWithBytes:[[path dataUsingEncoding:NSUTF8StringEncoding] bytes] length:[path length]];
-    [data writeToFile:SAVEFILE(@"text.txt") atomically:YES];
+    [data writeToFile:PATHFORFILE(@"text.txt") atomically:YES];
+    
+    if (ISNUMBERSTR(@"wm")) {
+        DEBUG_LOG(@"是数字");
+    }else{
+        DEBUG_LOG(@"不是数字");
+    }
+    
+    
+    
     
     UITextField *field = [[UITextField alloc]initWithFrame:CGRectMake(21, 55, 100, 30)];
     field.delegate = self;

@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //5
+    
+    
     
 }
 
@@ -25,6 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)testAction:(id)sender {
+    [self nine];
     NSDate *start = [NSDate date];
 //    NSArray *arr = [NSArray array];
 //    NSDictionary *dic = @{@"test":arr};
@@ -59,7 +63,7 @@
     [arr addObject:str];
     NSLog(@"%@",arr);
     NSArray *testArr = @[@"djfdj",@"ddfdf"];
-    NSLog(@"%@",testArr[2]);
+//    NSLog(@"%@",testArr[2]);
     
     if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear | UIImagePickerControllerCameraDeviceFront]) {
         UIImagePickerController *picker = [[UIImagePickerController alloc]init];
@@ -71,8 +75,8 @@
         UIView *overlayView = [[UIView alloc]initWithFrame:frame];
         overlayView.backgroundColor = [UIColor redColor];
         picker.cameraOverlayView = overlayView;
-        picker.cameraViewTransform = CGAffineTransformMakeRotation(90);
-        [self presentViewController:picker animated:YES completion:nil];
+        picker.cameraViewTransform = CGAffineTransformMakeRotation(-90);
+//        [self presentViewController:picker animated:YES completion:nil];
     }
 }
 
@@ -82,5 +86,17 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [picker popoverPresentationController];
 }
+
+- (void)nine{
+    NSCalendar
+    for (int i = 0; i<35;i++ ) {
+        printf("%d\t",i);
+        if (i%7 == 0) {
+            NSLog(@"\n");
+        }
+    }
+}
+
+
 
 @end

@@ -16,21 +16,39 @@
 #define DEBUGMETHOD()
 #endif
 
-// 颜色
+/**
+ *  颜色
+ */
 #define RGBA(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 #define RGB(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0f]
 
-// 版本
+/**
+ *  版本
+ */
 #define IOS_VERSION [[UIDevice currentDevice].systemVersion floatValue]
-// 大于等于__V 版本
+/**
+ *  大于等于__V 版本
+ */
 #define IOS_VERSION_BIGEREQUAL(__V) (IOS_VERSION > __V || IOS_VERSION == __V)?YES:NO
-// 工程版本
+/**
+ *  工程版本
+ */
 #define BUNDLE_VERSION  [[NSBundle mainBundle].infoDictionary objectForKey:(NSString *)kCFBundleVersionKey]
 
-// 沙盒路径
+/**
+ *  沙盒路径
+ */
 #define DOCUMENTPATH  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]
-// 将数据保存为__NAME 文件
-#define SAVEFILE(__NAME) [DOCUMENTPATH stringByAppendingPathComponent:__NAME]
+/**
+ *  __NAME 文件的路径
+ */
+#define PATHFORFILE(__NAME) [DOCUMENTPATH stringByAppendingPathComponent:__NAME]
+
+/**
+ *  判断字符串是否为数字
+ */
+#define ISNUMBERSTR(__STR) [[NSScanner scannerWithString:__STR] scanInt:nil]
+
 
 // 使用ARC
 #if __has_feature(objc_arc)
