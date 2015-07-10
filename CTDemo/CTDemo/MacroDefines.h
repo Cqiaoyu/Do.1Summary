@@ -42,12 +42,12 @@
 /**
  *  __NAME 文件的路径
  */
-#define PATHFORFILE(__NAME) [DOCUMENTPATH stringByAppendingPathComponent:__NAME]
+#define PATH_FOR_FILE(__NAME) [DOCUMENTPATH stringByAppendingPathComponent:__NAME]
 
 /**
  *  判断字符串是否为数字
  */
-#define ISNUMBERSTR(__STR) [[NSScanner scannerWithString:__STR] scanInt:nil]
+#define IS_NUMBER_STR(__STR) [[NSScanner scannerWithString:__STR] scanInt:nil]
 
 
 // 使用ARC

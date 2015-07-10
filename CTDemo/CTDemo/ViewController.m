@@ -9,6 +9,7 @@
 #import "ViewController.h" 
 
 
+
 @interface ViewController ()<UITextFieldDelegate>
 
 @end
@@ -32,14 +33,13 @@
     NSString *path = DOCUMENTPATH;
     
     NSData *data = [[NSData alloc] initWithBytes:[[path dataUsingEncoding:NSUTF8StringEncoding] bytes] length:[path length]];
-    [data writeToFile:PATHFORFILE(@"text.txt") atomically:YES];
+    [data writeToFile:PATH_FOR_FILE(@"text.txt") atomically:YES];
     
-    if (ISNUMBERSTR(@"wm")) {
+    if (IS_NUMBER_STR(@"wm")) {
         DEBUG_LOG(@"是数字");
     }else{
         DEBUG_LOG(@"不是数字");
     }
-    
     
     
     
@@ -66,5 +66,22 @@
     DEBUG_LOG(@"隐藏");
     
 }
+- (IBAction)tapAction:(id)sender {
+    [self test];
+}
+
+- (void) test{
+    
+}
+//单例
++ (instancetype) shareInstance{
+    static dispatch_once_t onceToken;
+    static ViewController *shareInstance = nil;
+    dispatch_once(&onceToken, ^{
+        shareInstance = [[ViewController alloc]init];
+    });
+    return shareInstance;
+}
+
 
 @end

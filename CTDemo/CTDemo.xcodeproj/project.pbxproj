@@ -15,6 +15,9 @@
 		2AC365991B43BBC600119E56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC365971B43BBC600119E56 /* LaunchScreen.xib */; };
 		2AC365A51B43BBC700119E56 /* CTDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC365A41B43BBC700119E56 /* CTDemoTests.m */; };
 		2AC365AF1B43C78A00119E56 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC365AE1B43C78A00119E56 /* CoreTelephony.framework */; };
+		2ACCE0991B4D22A90023EB81 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACCE0981B4D22A90023EB81 /* EventKitUI.framework */; };
+		2ACCE09D1B4D26B70023EB81 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACCE09C1B4D26B70023EB81 /* QuickLook.framework */; };
+		2ACCE09F1B4D27880023EB81 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACCE09E1B4D27880023EB81 /* PhotosUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		2AC986881B44CFAA00E11FCA /* CTDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTDemo-Prefix.pch"; sourceTree = "<group>"; };
 		2AC9868D1B44E08300E11FCA /* MacroDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefines.h; sourceTree = "<group>"; };
 		2AC986C01B45110C00E11FCA /* WorkSpaceDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WorkSpaceDemo.xcodeproj; path = WorkSpaceDemo/WorkSpaceDemo.xcodeproj; sourceTree = "<group>"; };
+		2ACCE0981B4D22A90023EB81 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		2ACCE09C1B4D26B70023EB81 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		2ACCE09E1B4D27880023EB81 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ACCE09F1B4D27880023EB81 /* PhotosUI.framework in Frameworks */,
+				2ACCE09D1B4D26B70023EB81 /* QuickLook.framework in Frameworks */,
+				2ACCE0991B4D22A90023EB81 /* EventKitUI.framework in Frameworks */,
 				2AC365AF1B43C78A00119E56 /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +92,9 @@
 		2AC3657C1B43BBC600119E56 = {
 			isa = PBXGroup;
 			children = (
+				2ACCE09E1B4D27880023EB81 /* PhotosUI.framework */,
+				2ACCE09C1B4D26B70023EB81 /* QuickLook.framework */,
+				2ACCE0981B4D22A90023EB81 /* EventKitUI.framework */,
 				2AC986C01B45110C00E11FCA /* WorkSpaceDemo.xcodeproj */,
 				2AC365AE1B43C78A00119E56 /* CoreTelephony.framework */,
 				2AC365871B43BBC600119E56 /* CTDemo */,
