@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3256720B34694288B919B2BC /* libPods-Interceptor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4777C991470441C6AF91432F /* libPods-Interceptor.a */; };
+		2AC5652C1B4FAAE40025EB67 /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5652B1B4FAAE40025EB67 /* SecondVC.m */; };
 		4A95186F1AE0C93F00920CC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A95186E1AE0C93F00920CC7 /* main.m */; };
 		4A9518721AE0C93F00920CC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9518711AE0C93F00920CC7 /* AppDelegate.m */; };
 		4A9518751AE0C93F00920CC7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9518741AE0C93F00920CC7 /* ViewController.m */; };
@@ -16,6 +16,7 @@
 		4A95187D1AE0C93F00920CC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A95187B1AE0C93F00920CC7 /* LaunchScreen.xib */; };
 		4A9518891AE0C93F00920CC7 /* InterceptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9518881AE0C93F00920CC7 /* InterceptorTests.m */; };
 		4A9518941AE0D50000920CC7 /* CTViewControllerIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9518931AE0D50000920CC7 /* CTViewControllerIntercepter.m */; };
+		DCABB60EA776FBEE299DC6E2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BE8BE78C7602B920961A22 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4777C991470441C6AF91432F /* libPods-Interceptor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Interceptor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AC5652A1B4FAAE40025EB67 /* SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
+		2AC5652B1B4FAAE40025EB67 /* SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
+		43BE8BE78C7602B920961A22 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9518691AE0C93F00920CC7 /* Interceptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interceptor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A95186D1AE0C93F00920CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A95186E1AE0C93F00920CC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,7 +48,8 @@
 		4A9518881AE0C93F00920CC7 /* InterceptorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterceptorTests.m; sourceTree = "<group>"; };
 		4A9518921AE0D50000920CC7 /* CTViewControllerIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTViewControllerIntercepter.h; sourceTree = "<group>"; };
 		4A9518931AE0D50000920CC7 /* CTViewControllerIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTViewControllerIntercepter.m; sourceTree = "<group>"; };
-		8D854E331ADE4966B91137EB /* Pods-Interceptor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interceptor.xcconfig"; path = "Pods/Pods-Interceptor.xcconfig"; sourceTree = "<group>"; };
+		5447A6CAB283F3AD1D0416CB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6B1FB099F858D42DCF3AA7A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3256720B34694288B919B2BC /* libPods-Interceptor.a in Frameworks */,
+				DCABB60EA776FBEE299DC6E2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,14 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CD286195A4D8BC5BDE56950 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B1FB099F858D42DCF3AA7A7 /* Pods.debug.xcconfig */,
+				5447A6CAB283F3AD1D0416CB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4A9518601AE0C93F00920CC7 = {
 			isa = PBXGroup;
 			children = (
 				4A95186B1AE0C93F00920CC7 /* Interceptor */,
 				4A9518851AE0C93F00920CC7 /* InterceptorTests */,
 				4A95186A1AE0C93F00920CC7 /* Products */,
-				8D854E331ADE4966B91137EB /* Pods-Interceptor.xcconfig */,
 				9EEC11E73EC7412684AE78CE /* Frameworks */,
+				2CD286195A4D8BC5BDE56950 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +107,8 @@
 				4A9518711AE0C93F00920CC7 /* AppDelegate.m */,
 				4A9518731AE0C93F00920CC7 /* ViewController.h */,
 				4A9518741AE0C93F00920CC7 /* ViewController.m */,
+				2AC5652A1B4FAAE40025EB67 /* SecondVC.h */,
+				2AC5652B1B4FAAE40025EB67 /* SecondVC.m */,
 				4A9518921AE0D50000920CC7 /* CTViewControllerIntercepter.h */,
 				4A9518931AE0D50000920CC7 /* CTViewControllerIntercepter.m */,
 				4A9518761AE0C93F00920CC7 /* Main.storyboard */,
@@ -133,7 +148,7 @@
 		9EEC11E73EC7412684AE78CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4777C991470441C6AF91432F /* libPods-Interceptor.a */,
+				43BE8BE78C7602B920961A22 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -263,7 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Interceptor-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -276,6 +291,7 @@
 				4A9518751AE0C93F00920CC7 /* ViewController.m in Sources */,
 				4A9518721AE0C93F00920CC7 /* AppDelegate.m in Sources */,
 				4A95186F1AE0C93F00920CC7 /* main.m in Sources */,
+				2AC5652C1B4FAAE40025EB67 /* SecondVC.m in Sources */,
 				4A9518941AE0D50000920CC7 /* CTViewControllerIntercepter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -391,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -400,7 +416,7 @@
 		};
 		4A95188D1AE0C93F00920CC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D854E331ADE4966B91137EB /* Pods-Interceptor.xcconfig */;
+			baseConfigurationReference = 6B1FB099F858D42DCF3AA7A7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Interceptor/Info.plist;
@@ -411,7 +427,7 @@
 		};
 		4A95188E1AE0C93F00920CC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D854E331ADE4966B91137EB /* Pods-Interceptor.xcconfig */;
+			baseConfigurationReference = 5447A6CAB283F3AD1D0416CB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Interceptor/Info.plist;

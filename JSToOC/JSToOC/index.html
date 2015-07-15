@@ -18,12 +18,26 @@
             function test(){
                 loadURL("ckh:test");
             }
+            function reader(){
+                alert("测试测试测试");
+                var btn;
+                btn = document.getElementByClass("input");
+                var contentValue = btn.content.value;
+                if (contentValue == "test"){
+                    btn.content.onclick = "listen()";
+                }
+                
+            }
+            function listen(){
+                alert("听");
+            }
             </script>
     </head>
     <body>
         <br/>
         <h1> 移动快捷业务 </h1>
         <input type="button" value="点击" onclick="test()" />
+        <input type ="button" value = "test" onclick = "reader()" />
     </body>
     
 </html>

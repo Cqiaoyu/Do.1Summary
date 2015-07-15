@@ -63,6 +63,7 @@
 {
     /* 你可以使用这个方法进行打日志，初始化基础业务相关的内容 */
     NSLog(@"[%@ loadView]", [viewController class]);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated viewController:(UIViewController *)viewController

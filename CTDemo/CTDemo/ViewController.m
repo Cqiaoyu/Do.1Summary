@@ -41,6 +41,9 @@
         DEBUG_LOG(@"不是数字");
     }
     
+    if ([self isPhoneNumber:@"13798877383"]) {
+        DEBUG_LOG(@"是电话号");
+    }
     
     
     UITextField *field = [[UITextField alloc]initWithFrame:CGRectMake(21, 55, 100, 30)];
@@ -73,6 +76,22 @@
 - (void) test{
     
 }
+
+- (BOOL)isPhoneNumber:(NSString *)str{
+    NSString *regex = @"1[3,5,8][5,7]\\d{8}";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self MATCHES %@",regex];
+    return [predicate evaluateWithObject:str];
+    
+}
+
+
+
+
+
+
+
+
+
 //单例
 + (instancetype) shareInstance{
     static dispatch_once_t onceToken;

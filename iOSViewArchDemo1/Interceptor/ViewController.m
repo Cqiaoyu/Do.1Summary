@@ -7,12 +7,20 @@
 //
 
 #import "ViewController.h"
+#import "SecondVC.h"
 
 @implementation ViewController
 
-/*
- 
-    业务方也不需要写任何迎合框架的代码
- */
-
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(10, 10, 60, 30);
+    [btn setTitle:@"tap" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(tap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+- (void) tap:(id)sender{
+    SecondVC *second = [[SecondVC alloc]init];
+    [self presentViewController:second animated:YES completion:nil];
+}
 @end

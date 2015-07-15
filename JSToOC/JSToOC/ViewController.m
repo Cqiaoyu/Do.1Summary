@@ -30,7 +30,7 @@
     [self.view addSubview:web];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    CGRect frame = {{10,100},{100,30}};
+    CGRect frame = {{250,100},{100,30}};
     button.frame = frame;
     [button setTitle:@"选择" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -65,6 +65,10 @@
         [self presentViewController:alert animated:YES completion:nil];
         return NO;
     }
+    //截取
+    NSString *btn = [NSString stringWithFormat:@""];
+    
+    
     return YES;
 }
 
