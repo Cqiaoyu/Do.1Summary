@@ -38,7 +38,7 @@
     NSArray *arrA = @[dic1,dic2,dic3];
     
     NSDictionary *dict1 = @{@"name":@"2323",@"prodID":@"2323",@"age":@"55",@"height":@"77",@"wight":@"22"};
-    NSDictionary *dict2 = @{@"name":@"2323",@"prodID":@"2323",@"age":@"55",@"height":@"77",@"wight":@"22"};
+    NSDictionary *dict2 = @{@"name":@"",@"prodID":@"2323",@"age":@"55",@"height":@"77",@"wight":@"22"};
     
     TestModel *model4 = [TestModel getTestModelInstance];
     [model4 setValuesForKeysWithDictionary:dict1];
