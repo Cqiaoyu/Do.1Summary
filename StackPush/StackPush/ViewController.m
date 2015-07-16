@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "ThirdVC.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    NSMutableDictionary *testDic;
+}
 
 @end
 
@@ -18,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    testDic = [NSMutableDictionary dictionary];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,16 +30,17 @@
 - (IBAction)btnClickedAction:(id)sender {
 //    [self performSegueWithIdentifier:@"showDetail" sender:nil];
     ThirdVC *th = [[ThirdVC alloc]init];
-    [self.navigationController pushViewController:th animated:YES];
+    th.dic = testDic;
     
     [self test];
-    
+    [self.navigationController pushViewController:th animated:YES];
 }
 
 -(void)test{
     float sum = 0;
-    for (int i = 0; i< 1000000000; i++) {
+    for (int i = 0; i< 100000; i++) {
         sum += i * 0.3 - 7/2 + i%5;
+        [testDic setObject:[NSNumber numberWithInt:sum] forKey:[NSString  stringWithFormat:@"%d",i]];
     }
 }
 

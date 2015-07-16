@@ -28,7 +28,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)testAction:(id)sender {
-    [self nine];
     NSDate *start = [NSDate date];
 //    NSArray *arr = [NSArray array];
 //    NSDictionary *dic = @{@"test":arr};
@@ -46,7 +45,7 @@
     });
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://h.hiphotos.baidu.com/image/pic/item/7a899e510fb30f240db64cbfcb95d143ad4b0359.jpg"]];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {//这个的速度比上面的那个快
         CGRect ivFrame = {{20,30},{280,150}};
         UIImageView *iv = [[UIImageView alloc]initWithFrame:ivFrame];
         iv.image = [UIImage imageWithData:data];
@@ -87,15 +86,6 @@
     [picker popoverPresentationController];
 }
 
-- (void)nine{
-    NSCalendar
-    for (int i = 0; i<35;i++ ) {
-        printf("%d\t",i);
-        if (i%7 == 0) {
-            NSLog(@"\n");
-        }
-    }
-}
 
 
 

@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  ExceptionTest
+//  JPhshDemo
 //
-//  Created by LJ on 15/5/13.
+//  Created by LJ on 15/7/16.
 //  Copyright (c) 2015年 广东道一信息科技有限公司. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BugReporter.h"
 
 @interface AppDelegate ()
 
@@ -18,27 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [BugReporter bugReport];
-    
-    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"bugReport"];
-    [self sendBugReportWithFilePath:path];
-    
     return YES;
-}
-
-
-- (void)sendBugReportWithFilePath:(NSString *)path{
-    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        //
-        NSString *bug = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        NSString *from = @"cenkh@outlook.com";
-        NSString *to = @"1250578320@qq.com";
-        NSString *urlStr = [NSString stringWithFormat:@"mailto:%@?cc=%@&subject=bug报告!&body=%@",to,from,bug];
-        urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
-        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
-    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

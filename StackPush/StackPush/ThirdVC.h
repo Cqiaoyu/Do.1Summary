@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ThirdVC : UIViewController
-
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSArray *arr;
+@property (nonatomic, strong) NSString *width;
+@property (nonatomic, strong) NSDictionary *dic;
 @end
