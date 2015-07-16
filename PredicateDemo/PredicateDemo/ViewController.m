@@ -35,6 +35,7 @@
     TestModel *model3 = [TestModel getTestModelInstance];
     [model3 setValuesForKeysWithDictionary:dic3];
     NSArray *arr = @[model1,model2,model3];
+    NSArray *arrA = @[dic1,dic2,dic3];
     
     NSDictionary *dict1 = @{@"name":@"2323",@"prodID":@"2323",@"age":@"55",@"height":@"77",@"wight":@"22"};
     NSDictionary *dict2 = @{@"name":@"2323",@"prodID":@"2323",@"age":@"55",@"height":@"77",@"wight":@"22"};
@@ -44,6 +45,7 @@
     TestModel *model5 = [TestModel getTestModelInstance];
     [model5 setValuesForKeysWithDictionary:dict2];
     NSArray *arr2 = @[model4,model4];
+    NSArray *arrA2 = @[dict1,dict2];
     
     for (int i = 0 ; i < 3; i++) {
         TestModel *local = arr[i];//模拟本地
@@ -56,7 +58,17 @@
         }
         
     }
-    
+    for (int i = 0 ; i < 3; i++) {
+        NSDictionary *local = arrA[i];//模拟本地
+        for (int j = 0; j<2; j++) {
+            NSDictionary *web = arrA2[j];//模拟服务返回数据
+            NSPredicate *pre = [NSPredicate predicateWithFormat:@"prodID == %@",dict1[@"prodID"]];
+            if ([pre evaluateWithObject:local]) {
+                NSLog(@"#字典# %ld:%@",i,[local description]);
+            }
+        }
+        
+    }
     
     
     for (int i = 0; i < 10; i++) {
