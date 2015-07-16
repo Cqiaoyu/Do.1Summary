@@ -7,6 +7,7 @@
 //
 
 #import "SecondVC.h"
+#import "ThirdVC.h"
 
 @interface SecondVC ()
 
@@ -17,12 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self performSegueWithIdentifier:@"ThirdVCDetail" sender:nil];
+    self.view.backgroundColor = [UIColor grayColor];
+    ThirdVC *th = [[ThirdVC alloc]init];
     
     float sum = 0;
     for (int i = 0; i< 1000000000; i++) {
         sum += i * 0.3 - 7/2 + i%5;
     }
+    [self.navigationController pushViewController:th animated:YES];
     NSLog(@"%f",sum);
 }
 

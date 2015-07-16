@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ThirdVC.h"
 
 @interface ViewController ()
 
@@ -24,7 +25,19 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btnClickedAction:(id)sender {
-    [self performSegueWithIdentifier:@"showDetail" sender:nil];
+//    [self performSegueWithIdentifier:@"showDetail" sender:nil];
+    ThirdVC *th = [[ThirdVC alloc]init];
+    [self.navigationController pushViewController:th animated:YES];
+    
+    [self test];
+    
+}
+
+-(void)test{
+    float sum = 0;
+    for (int i = 0; i< 1000000000; i++) {
+        sum += i * 0.3 - 7/2 + i%5;
+    }
 }
 
 @end
