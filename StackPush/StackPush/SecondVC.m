@@ -20,13 +20,13 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor grayColor];
     ThirdVC *th = [[ThirdVC alloc]init];
-    
-    float sum = 0;
-    for (int i = 0; i< 1000000000; i++) {
-        sum += i * 0.3 - 7/2 + i%5;
-    }
-    [self.navigationController pushViewController:th animated:YES];
-    NSLog(@"%f",sum);
+    NSLog(@"#第二个#%@",_dic);
+//    float sum = 0;
+//    for (int i = 0; i< 1000000000; i++) {
+//        sum += i * 0.3 - 7/2 + i%5;
+//    }
+//    [self.navigationController pushViewController:th animated:YES];
+//    NSLog(@"%f",sum);
 }
 
 - (void)didReceiveMemoryWarning {

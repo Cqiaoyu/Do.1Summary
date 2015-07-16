@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ThirdVC.h"
+#import "SecondVC.h"
 
 @interface ViewController (){
     NSMutableDictionary *testDic;
@@ -31,9 +32,11 @@
 //    [self performSegueWithIdentifier:@"showDetail" sender:nil];
     ThirdVC *th = [[ThirdVC alloc]init];
     th.dic = testDic;
-    
+//    [self.navigationController pushViewController:th animated:YES];
+    [self presentViewController:th animated:YES completion:nil];
+//    [self performSegueWithIdentifier:@"showDetail" sender:nil];
     [self test];
-    [self.navigationController pushViewController:th animated:YES];
+    
 }
 
 -(void)test{
@@ -41,7 +44,13 @@
     for (int i = 0; i< 100000; i++) {
         sum += i * 0.3 - 7/2 + i%5;
         [testDic setObject:[NSNumber numberWithInt:sum] forKey:[NSString  stringWithFormat:@"%d",i]];
+//        NSLog(@"@输出@%d",i);
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    SecondVC *sec = segue.destinationViewController;
+    sec.dic = testDic;
 }
 
 @end

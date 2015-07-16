@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [ UIColor groupTableViewBackgroundColor];
-    NSLog(@"%@",_dic);
+    NSLog(@"#第三个#%@",_dic);
 }
 
 - (void)didReceiveMemoryWarning {

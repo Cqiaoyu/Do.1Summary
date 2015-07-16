@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondVC : UIViewController
-
+@property (strong, nonatomic) NSDictionary *dic;
 @end
