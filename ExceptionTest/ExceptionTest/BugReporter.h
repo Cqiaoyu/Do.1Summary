@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
 
 @interface BugReporter : NSObject
 

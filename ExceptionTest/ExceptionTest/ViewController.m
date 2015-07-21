@@ -62,7 +62,7 @@
     [arr addObject:str];
     NSLog(@"%@",arr);
     NSArray *testArr = @[@"djfdj",@"ddfdf"];
-//    NSLog(@"%@",testArr[2]);
+    NSLog(@"%@",testArr[2]);
     
     if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear | UIImagePickerControllerCameraDeviceFront]) {
         UIImagePickerController *picker = [[UIImagePickerController alloc]init];
