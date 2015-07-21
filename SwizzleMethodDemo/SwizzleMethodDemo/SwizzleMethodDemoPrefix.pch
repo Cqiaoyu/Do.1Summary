@@ -1,0 +1,18 @@
+//
+//  SwizzleMethodDemoPrefix.pch
+//  SwizzleMethodDemo
+//
+//  Created by LJ on 15/7/21.
+//  Copyright (c) 2015年 广东道一信息科技有限公司. All rights reserved.
+//
+
+#ifndef SwizzleMethodDemo_SwizzleMethodDemoPrefix_pch
+#define SwizzleMethodDemo_SwizzleMethodDemoPrefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Car.h"
+
+
+#endif

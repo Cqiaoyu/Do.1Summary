@@ -14,6 +14,9 @@
 		2AC95AF51B5DE157008335EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC95AF41B5DE157008335EB /* Images.xcassets */; };
 		2AC95AF81B5DE157008335EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC95AF61B5DE157008335EB /* LaunchScreen.xib */; };
 		2AC95B041B5DE158008335EB /* SwizzleMethodDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC95B031B5DE158008335EB /* SwizzleMethodDemoTests.m */; };
+		2AC95B0E1B5DE2C0008335EB /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2AC95B0D1B5DE2C0008335EB /* ReadMe.txt */; };
+		2AC95B111B5DE365008335EB /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC95B101B5DE365008335EB /* Car.m */; };
+		2AC95B141B5DE457008335EB /* SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC95B131B5DE457008335EB /* SwizzleMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		2AC95AFD1B5DE158008335EB /* SwizzleMethodDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwizzleMethodDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC95B021B5DE158008335EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC95B031B5DE158008335EB /* SwizzleMethodDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzleMethodDemoTests.m; sourceTree = "<group>"; };
+		2AC95B0D1B5DE2C0008335EB /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		2AC95B0F1B5DE365008335EB /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		2AC95B101B5DE365008335EB /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		2AC95B121B5DE457008335EB /* SwizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzleMethod.h; sourceTree = "<group>"; };
+		2AC95B131B5DE457008335EB /* SwizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleMethod.m; sourceTree = "<group>"; };
+		2AC95B151B5DE532008335EB /* SwizzleMethodDemoPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzleMethodDemoPrefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,7 @@
 		2AC95ADB1B5DE157008335EB = {
 			isa = PBXGroup;
 			children = (
+				2AC95B0D1B5DE2C0008335EB /* ReadMe.txt */,
 				2AC95AE61B5DE157008335EB /* SwizzleMethodDemo */,
 				2AC95B001B5DE158008335EB /* SwizzleMethodDemoTests */,
 				2AC95AE51B5DE157008335EB /* Products */,
@@ -85,6 +95,10 @@
 				2AC95AEC1B5DE157008335EB /* AppDelegate.m */,
 				2AC95AEE1B5DE157008335EB /* ViewController.h */,
 				2AC95AEF1B5DE157008335EB /* ViewController.m */,
+				2AC95B0F1B5DE365008335EB /* Car.h */,
+				2AC95B101B5DE365008335EB /* Car.m */,
+				2AC95B121B5DE457008335EB /* SwizzleMethod.h */,
+				2AC95B131B5DE457008335EB /* SwizzleMethod.m */,
 				2AC95AF11B5DE157008335EB /* Main.storyboard */,
 				2AC95AF41B5DE157008335EB /* Images.xcassets */,
 				2AC95AF61B5DE157008335EB /* LaunchScreen.xib */,
@@ -98,6 +112,7 @@
 			children = (
 				2AC95AE81B5DE157008335EB /* Info.plist */,
 				2AC95AE91B5DE157008335EB /* main.m */,
+				2AC95B151B5DE532008335EB /* SwizzleMethodDemoPrefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -201,6 +216,7 @@
 			files = (
 				2AC95AF31B5DE157008335EB /* Main.storyboard in Resources */,
 				2AC95AF81B5DE157008335EB /* LaunchScreen.xib in Resources */,
+				2AC95B0E1B5DE2C0008335EB /* ReadMe.txt in Resources */,
 				2AC95AF51B5DE157008335EB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +237,9 @@
 			files = (
 				2AC95AF01B5DE157008335EB /* ViewController.m in Sources */,
 				2AC95AED1B5DE157008335EB /* AppDelegate.m in Sources */,
+				2AC95B111B5DE365008335EB /* Car.m in Sources */,
 				2AC95AEA1B5DE157008335EB /* main.m in Sources */,
+				2AC95B141B5DE457008335EB /* SwizzleMethod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/SwizzleMethodDemo/SwizzleMethodDemoPrefix.pch";
 				INFOPLIST_FILE = SwizzleMethodDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/SwizzleMethodDemo/SwizzleMethodDemoPrefix.pch";
 				INFOPLIST_FILE = SwizzleMethodDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

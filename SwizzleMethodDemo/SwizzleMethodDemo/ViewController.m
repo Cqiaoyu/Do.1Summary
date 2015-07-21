@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Car.h"
+#import "SwizzleMethod.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    Car *car = [[Car alloc]init];
+    [car run];
+    
 }
 
 - (void)didReceiveMemoryWarning {
