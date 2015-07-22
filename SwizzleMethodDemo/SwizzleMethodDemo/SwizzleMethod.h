@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <objc/runtime.h>
 
 typedef enum SwizzleMethodTimeOption {
     SwizzleMethodTimeTypeBefore = 0,
@@ -17,5 +16,4 @@ typedef enum SwizzleMethodTimeOption {
 } SwizzleMethodTimeOption;
 
 @interface SwizzleMethod : NSObject
-- (void)interceptMethod:(Method)orgMethod withImplementationOfMethod:(Method)newMethod option:(SwizzleMethodTimeOption)timeOption;
 @end

@@ -7,9 +7,32 @@
 //
 
 #import "SwizzleMethod.h"
+#import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
+
+@interface UIViewController (SwizzleViewController)
+
+
+@end
+
+@implementation UIViewController (SwizzleViewController)
+
+
+
+@end
+
+
+
+
+
 @implementation SwizzleMethod
+
+
++(void)load{
+    [super load];
+    [SwizzleMethod shareInstance];
+}
 
 + (instancetype)shareInstance{
     static SwizzleMethod *instance;
@@ -22,47 +45,39 @@
     return instance;
     
 }
-
-
-+(void)load{
+- (instancetype)init{
+    if (self = [super init]) {
+        [self swizzleMethod];
+    }
+    return self;
+}
+- (void)swizzleMethod{
     static dispatch_once_t token;
     dispatch_once(&token, ^{
-        Method orgMethod = class_getInstanceMethod([Car class], @selector(run));
-        Method swizzleMethod = class_getInstanceMethod([self class], @selector(swizzleRun));
-//        IMP orgIMP = method_getImplementation(orgMethod);
-//        method_setImplementation(swizzleMethod, orgIMP);
-//        method_exchangeImplementations(orgMethod, swizzleMethod);//完全替换原有方法
-//       BOOL addMethod = class_addMethod([Car class], @selector(run), method_getImplementation(swizzleMethod), method_getTypeEncoding(swizzleMethod));
-//        if (addMethod) {
-//            NSLog(@"ww");
-//        }
+        /*--UIViewController--*/
+        Method orgLoadViewMethod = class_getInstanceMethod([UIViewController class], @selector(loadView));
+        Method swizzleLoadViewMethod = class_getInstanceMethod([self class], @selector(swizzleLoadView));
+        Method dd = class_getInstanceMethod([UIViewController class], @selector(swizzleLoadView));
+        BOOL addMethod = class_addMethod([UIViewController class], @selector(swizzleLoadView), method_getImplementation(swizzleLoadViewMethod), method_getTypeEncoding(swizzleLoadViewMethod));
+        if (addMethod) {
+//            class_replaceMethod([UIViewController class], @selector(loadView), method_getImplementation(swizzleLoadViewMethod), method_getTypeEncoding(swizzleLoadViewMethod));
+            method_setImplementation(dd, method_getImplementation(swizzleLoadViewMethod));
+            method_exchangeImplementations(orgLoadViewMethod, dd);
+        }
+        else{
+            method_exchangeImplementations(orgLoadViewMethod, swizzleLoadViewMethod);
+        }
         
-//        IMP orgimp = class_getMethodImplementation([Car class], @selector(run));
-//        class_replaceMethod([self class], @selector(swizzleRun), orgimp, method_getTypeEncoding(orgMethod));
-//        method_getImplementation(swizzleMethod);
-//        method_setImplementation(swizzleMethod, orgimp);
-        
-        IMP orgIMP = method_getImplementation(orgMethod);
-        method_setImplementation(class_getInstanceMethod([self class], @selector(org)), orgIMP);
-        method_exchangeImplementations(swizzleMethod, orgMethod);
     });
 }
 
-- (void)orgMethod{
-    
-}
 
-- (void)newMethod{
-
-}
-- (void)swizzleRun{
-    SwizzleMethod *s = [SwizzleMethod  shareInstance];
-    [s orgMethod];
+- (void)swizzleLoadView{//实际的run方法的实现，调用swizzleLoadView方法时实际上是调用run方法
+    [self swizzleLoadView];
+    //调用run方法时，实际上是调用此方法
     NSLog(@"$$再跑$$");
-}
-
-- (void)interceptMethod:(Method)orgMethod withImplementationOfMethod:(Method)newMethod withTimeType:(SwizzleMethodTimeOption)timetype{
     
 }
 
 @end
+
