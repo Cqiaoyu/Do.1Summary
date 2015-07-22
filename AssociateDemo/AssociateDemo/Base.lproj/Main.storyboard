@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpr-J1-MyG">
+                                <rect key="frame" x="45" y="47" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Vmc-Ev-6Fr"/>
+                                    <constraint firstAttribute="width" constant="46" id="WKW-R7-geR"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="veL-tW-SqX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50o-bT-fNy">
+                                <rect key="frame" x="524" y="47" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="thirdAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZe-UO-ZIG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJa-Kx-MoN">
+                                <rect key="frame" x="277" y="47" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="secondAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ua-uU-yUL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hJa-Kx-MoN" secondAttribute="centerX" id="159-pw-qZH"/>
+                            <constraint firstItem="hJa-Kx-MoN" firstAttribute="top" secondItem="50o-bT-fNy" secondAttribute="top" id="2QK-Dv-yaz"/>
+                            <constraint firstAttribute="trailing" secondItem="50o-bT-fNy" secondAttribute="trailing" constant="30" id="3dU-Py-Lnz"/>
+                            <constraint firstItem="hJa-Kx-MoN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="F8F-d5-Xrv"/>
+                            <constraint firstItem="hJa-Kx-MoN" firstAttribute="width" secondItem="mpr-J1-MyG" secondAttribute="width" id="Fb9-MG-lOZ"/>
+                            <constraint firstItem="hJa-Kx-MoN" firstAttribute="height" secondItem="mpr-J1-MyG" secondAttribute="height" id="GjA-21-Kcr"/>
+                            <constraint firstItem="hJa-Kx-MoN" firstAttribute="top" secondItem="mpr-J1-MyG" secondAttribute="top" id="MRP-tG-SG4"/>
+                            <constraint firstItem="hJa-Kx-MoN" firstAttribute="width" secondItem="50o-bT-fNy" secondAttribute="width" id="ZdR-AO-0En"/>
+                            <constraint firstItem="hJa-Kx-MoN" firstAttribute="height" secondItem="50o-bT-fNy" secondAttribute="height" id="afH-l8-gg1"/>
+                            <constraint firstItem="mpr-J1-MyG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="baH-i5-wWo"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
