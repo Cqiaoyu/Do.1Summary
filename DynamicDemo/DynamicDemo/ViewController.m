@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CKHDictionary.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    CKHDictionary *dic = [[CKHDictionary alloc]init];
+    dic.string = @"动态方法解析";
+    dic.date = [NSDate date];
+    NSLog(@"%@%@",dic.string,dic.date);
+    
 }
 
 - (void)didReceiveMemoryWarning {

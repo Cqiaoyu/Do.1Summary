@@ -14,6 +14,8 @@
 		2AC73F901B5F9426006FA02C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC73F8F1B5F9426006FA02C /* Images.xcassets */; };
 		2AC73F931B5F9426006FA02C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC73F911B5F9426006FA02C /* LaunchScreen.xib */; };
 		2AC73F9F1B5F9426006FA02C /* DynamicDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC73F9E1B5F9426006FA02C /* DynamicDemoTests.m */; };
+		2AC73FAA1B5F952D006FA02C /* CKHDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC73FA91B5F952D006FA02C /* CKHDictionary.m */; };
+		2AC73FAC1B5F9542006FA02C /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2AC73FAB1B5F9542006FA02C /* ReadMe.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		2AC73F981B5F9426006FA02C /* DynamicDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC73F9D1B5F9426006FA02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC73F9E1B5F9426006FA02C /* DynamicDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicDemoTests.m; sourceTree = "<group>"; };
+		2AC73FA81B5F952D006FA02C /* CKHDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHDictionary.h; sourceTree = "<group>"; };
+		2AC73FA91B5F952D006FA02C /* CKHDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHDictionary.m; sourceTree = "<group>"; };
+		2AC73FAB1B5F9542006FA02C /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		2AC73F761B5F9426006FA02C = {
 			isa = PBXGroup;
 			children = (
+				2AC73FAB1B5F9542006FA02C /* ReadMe.txt */,
 				2AC73F811B5F9426006FA02C /* DynamicDemo */,
 				2AC73F9B1B5F9426006FA02C /* DynamicDemoTests */,
 				2AC73F801B5F9426006FA02C /* Products */,
@@ -85,6 +91,8 @@
 				2AC73F871B5F9426006FA02C /* AppDelegate.m */,
 				2AC73F891B5F9426006FA02C /* ViewController.h */,
 				2AC73F8A1B5F9426006FA02C /* ViewController.m */,
+				2AC73FA81B5F952D006FA02C /* CKHDictionary.h */,
+				2AC73FA91B5F952D006FA02C /* CKHDictionary.m */,
 				2AC73F8C1B5F9426006FA02C /* Main.storyboard */,
 				2AC73F8F1B5F9426006FA02C /* Images.xcassets */,
 				2AC73F911B5F9426006FA02C /* LaunchScreen.xib */,
@@ -201,6 +209,7 @@
 			files = (
 				2AC73F8E1B5F9426006FA02C /* Main.storyboard in Resources */,
 				2AC73F931B5F9426006FA02C /* LaunchScreen.xib in Resources */,
+				2AC73FAC1B5F9542006FA02C /* ReadMe.txt in Resources */,
 				2AC73F901B5F9426006FA02C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +230,7 @@
 			files = (
 				2AC73F8B1B5F9426006FA02C /* ViewController.m in Sources */,
 				2AC73F881B5F9426006FA02C /* AppDelegate.m in Sources */,
+				2AC73FAA1B5F952D006FA02C /* CKHDictionary.m in Sources */,
 				2AC73F851B5F9426006FA02C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
