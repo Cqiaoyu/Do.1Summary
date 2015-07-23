@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3D70002197F51CF00C997D0 /* libCKHShareToWB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D7FFEA197F51CF00C997D0 /* libCKHShareToWB.a */; };
+		C3D70008197F51CF00C997D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3D70006197F51CF00C997D0 /* InfoPlist.strings */; };
+		C3D7000A197F51CF00C997D0 /* CKHShareToWBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D70009197F51CF00C997D0 /* CKHShareToWBTests.m */; };
+		C3D7001A197F52A800C997D0 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D70017197F52A800C997D0 /* libTCWeiboSDK.a */; };
+		C3D7001E197F52B900C997D0 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D7001B197F52B900C997D0 /* libWeiboSDK.a */; };
+		C3D70028197F52EA00C997D0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D70021197F52EA00C997D0 /* Reachability.m */; };
+		C3D70029197F52EA00C997D0 /* SharedToWBController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D70023197F52EA00C997D0 /* SharedToWBController.m */; };
+		C3D7002A197F52EA00C997D0 /* EditTCWeiboController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D70025197F52EA00C997D0 /* EditTCWeiboController.m */; };
+		C3D7002F197F530500C997D0 /* textBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C3D7002C197F530500C997D0 /* textBackground.png */; };
+		C3D70030197F530500C997D0 /* weibosdk_bg_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = C3D7002D197F530500C997D0 /* weibosdk_bg_btn.png */; };
+		C3D70031197F530500C997D0 /* weibosdk_bg_delwords_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = C3D7002E197F530500C997D0 /* weibosdk_bg_delwords_nor.png */; };
+		C3D7FFEE197F51CF00C997D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D7FFED197F51CF00C997D0 /* Foundation.framework */; };
+		C3D7FFFC197F51CF00C997D0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D7FFFB197F51CF00C997D0 /* XCTest.framework */; };
+		C3D7FFFD197F51CF00C997D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D7FFED197F51CF00C997D0 /* Foundation.framework */; };
+		C3D7FFFF197F51CF00C997D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D7FFFE197F51CF00C997D0 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3D70000197F51CF00C997D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D7FFE2197F51CF00C997D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3D7FFE9197F51CF00C997D0;
+			remoteInfo = CKHShareToWB;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C3D7FFE8197F51CF00C997D0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C3D70005197F51CF00C997D0 /* CKHShareToWBTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CKHShareToWBTests-Info.plist"; sourceTree = "<group>"; };
+		C3D70007197F51CF00C997D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3D70009197F51CF00C997D0 /* CKHShareToWBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKHShareToWBTests.m; sourceTree = "<group>"; };
+		C3D70016197F526E00C997D0 /* constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
+		C3D70017197F52A800C997D0 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
+		C3D70018197F52A800C997D0 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
+		C3D70019197F52A800C997D0 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
+		C3D7001B197F52B900C997D0 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		C3D7001C197F52B900C997D0 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		C3D7001D197F52B900C997D0 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		C3D70020197F52EA00C997D0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C3D70021197F52EA00C997D0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C3D70022197F52EA00C997D0 /* SharedToWBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedToWBController.h; sourceTree = "<group>"; };
+		C3D70023197F52EA00C997D0 /* SharedToWBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedToWBController.m; sourceTree = "<group>"; };
+		C3D70024197F52EA00C997D0 /* EditTCWeiboController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTCWeiboController.h; sourceTree = "<group>"; };
+		C3D70025197F52EA00C997D0 /* EditTCWeiboController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTCWeiboController.m; sourceTree = "<group>"; };
+		C3D70027197F52EA00C997D0 /* CKHShareTCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHShareTCDelegate.h; sourceTree = "<group>"; };
+		C3D7002C197F530500C997D0 /* textBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textBackground.png; sourceTree = "<group>"; };
+		C3D7002D197F530500C997D0 /* weibosdk_bg_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weibosdk_bg_btn.png; sourceTree = "<group>"; };
+		C3D7002E197F530500C997D0 /* weibosdk_bg_delwords_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weibosdk_bg_delwords_nor.png; sourceTree = "<group>"; };
+		C3D7FFEA197F51CF00C997D0 /* libCKHShareToWB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCKHShareToWB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3D7FFED197F51CF00C997D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3D7FFF1197F51CF00C997D0 /* CKHShareToWB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CKHShareToWB-Prefix.pch"; sourceTree = "<group>"; };
+		C3D7FFFA197F51CF00C997D0 /* CKHShareToWBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CKHShareToWBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3D7FFFB197F51CF00C997D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C3D7FFFE197F51CF00C997D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3D7FFE7197F51CF00C997D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D7001A197F52A800C997D0 /* libTCWeiboSDK.a in Frameworks */,
+				C3D7001E197F52B900C997D0 /* libWeiboSDK.a in Frameworks */,
+				C3D7FFEE197F51CF00C997D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3D7FFF7197F51CF00C997D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D70002197F51CF00C997D0 /* libCKHShareToWB.a in Frameworks */,
+				C3D7FFFC197F51CF00C997D0 /* XCTest.framework in Frameworks */,
+				C3D7FFFF197F51CF00C997D0 /* UIKit.framework in Frameworks */,
+				C3D7FFFD197F51CF00C997D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3D70003197F51CF00C997D0 /* CKHShareToWBTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3D70009197F51CF00C997D0 /* CKHShareToWBTests.m */,
+				C3D70004197F51CF00C997D0 /* Supporting Files */,
+			);
+			path = CKHShareToWBTests;
+			sourceTree = "<group>";
+		};
+		C3D70004197F51CF00C997D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3D70005197F51CF00C997D0 /* CKHShareToWBTests-Info.plist */,
+				C3D70006197F51CF00C997D0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3D70013197F521300C997D0 /* WBLib */ = {
+			isa = PBXGroup;
+			children = (
+				C3D70016197F526E00C997D0 /* constant.h */,
+				C3D70015197F525D00C997D0 /* Sina */,
+				C3D70014197F525600C997D0 /* TC */,
+			);
+			name = WBLib;
+			sourceTree = "<group>";
+		};
+		C3D70014197F525600C997D0 /* TC */ = {
+			isa = PBXGroup;
+			children = (
+				C3D70017197F52A800C997D0 /* libTCWeiboSDK.a */,
+				C3D70018197F52A800C997D0 /* WeiboApi.h */,
+				C3D70019197F52A800C997D0 /* WeiboApiObject.h */,
+			);
+			name = TC;
+			sourceTree = "<group>";
+		};
+		C3D70015197F525D00C997D0 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7001B197F52B900C997D0 /* libWeiboSDK.a */,
+				C3D7001C197F52B900C997D0 /* WeiboSDK.bundle */,
+				C3D7001D197F52B900C997D0 /* WeiboSDK.h */,
+			);
+			name = Sina;
+			sourceTree = "<group>";
+		};
+		C3D7001F197F52C700C997D0 /* CKHShareWB */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7002B197F52ED00C997D0 /* Resource */,
+				C3D70020197F52EA00C997D0 /* Reachability.h */,
+				C3D70021197F52EA00C997D0 /* Reachability.m */,
+				C3D70022197F52EA00C997D0 /* SharedToWBController.h */,
+				C3D70023197F52EA00C997D0 /* SharedToWBController.m */,
+				C3D70024197F52EA00C997D0 /* EditTCWeiboController.h */,
+				C3D70025197F52EA00C997D0 /* EditTCWeiboController.m */,
+				C3D70027197F52EA00C997D0 /* CKHShareTCDelegate.h */,
+			);
+			name = CKHShareWB;
+			sourceTree = "<group>";
+		};
+		C3D7002B197F52ED00C997D0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7002C197F530500C997D0 /* textBackground.png */,
+				C3D7002D197F530500C997D0 /* weibosdk_bg_btn.png */,
+				C3D7002E197F530500C997D0 /* weibosdk_bg_delwords_nor.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		C3D7FFE1197F51CF00C997D0 = {
+			isa = PBXGroup;
+			children = (
+				C3D7FFEF197F51CF00C997D0 /* CKHShareToWB */,
+				C3D70003197F51CF00C997D0 /* CKHShareToWBTests */,
+				C3D7FFEC197F51CF00C997D0 /* Frameworks */,
+				C3D7FFEB197F51CF00C997D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3D7FFEB197F51CF00C997D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7FFEA197F51CF00C997D0 /* libCKHShareToWB.a */,
+				C3D7FFFA197F51CF00C997D0 /* CKHShareToWBTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3D7FFEC197F51CF00C997D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7FFED197F51CF00C997D0 /* Foundation.framework */,
+				C3D7FFFB197F51CF00C997D0 /* XCTest.framework */,
+				C3D7FFFE197F51CF00C997D0 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3D7FFEF197F51CF00C997D0 /* CKHShareToWB */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7001F197F52C700C997D0 /* CKHShareWB */,
+				C3D70013197F521300C997D0 /* WBLib */,
+				C3D7FFF0197F51CF00C997D0 /* Supporting Files */,
+			);
+			path = CKHShareToWB;
+			sourceTree = "<group>";
+		};
+		C3D7FFF0197F51CF00C997D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7FFF1197F51CF00C997D0 /* CKHShareToWB-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3D7FFE9197F51CF00C997D0 /* CKHShareToWB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3D7000D197F51CF00C997D0 /* Build configuration list for PBXNativeTarget "CKHShareToWB" */;
+			buildPhases = (
+				C3D7FFE6197F51CF00C997D0 /* Sources */,
+				C3D7FFE7197F51CF00C997D0 /* Frameworks */,
+				C3D7FFE8197F51CF00C997D0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CKHShareToWB;
+			productName = CKHShareToWB;
+			productReference = C3D7FFEA197F51CF00C997D0 /* libCKHShareToWB.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C3D7FFF9197F51CF00C997D0 /* CKHShareToWBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3D70010197F51CF00C997D0 /* Build configuration list for PBXNativeTarget "CKHShareToWBTests" */;
+			buildPhases = (
+				C3D7FFF6197F51CF00C997D0 /* Sources */,
+				C3D7FFF7197F51CF00C997D0 /* Frameworks */,
+				C3D7FFF8197F51CF00C997D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3D70001197F51CF00C997D0 /* PBXTargetDependency */,
+			);
+			name = CKHShareToWBTests;
+			productName = CKHShareToWBTests;
+			productReference = C3D7FFFA197F51CF00C997D0 /* CKHShareToWBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3D7FFE2197F51CF00C997D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = cenkh;
+			};
+			buildConfigurationList = C3D7FFE5197F51CF00C997D0 /* Build configuration list for PBXProject "CKHShareToWB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3D7FFE1197F51CF00C997D0;
+			productRefGroup = C3D7FFEB197F51CF00C997D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3D7FFE9197F51CF00C997D0 /* CKHShareToWB */,
+				C3D7FFF9197F51CF00C997D0 /* CKHShareToWBTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3D7FFF8197F51CF00C997D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D70031197F530500C997D0 /* weibosdk_bg_delwords_nor.png in Resources */,
+				C3D70030197F530500C997D0 /* weibosdk_bg_btn.png in Resources */,
+				C3D7002F197F530500C997D0 /* textBackground.png in Resources */,
+				C3D70008197F51CF00C997D0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3D7FFE6197F51CF00C997D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D70029197F52EA00C997D0 /* SharedToWBController.m in Sources */,
+				C3D70028197F52EA00C997D0 /* Reachability.m in Sources */,
+				C3D7002A197F52EA00C997D0 /* EditTCWeiboController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3D7FFF6197F51CF00C997D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D7000A197F51CF00C997D0 /* CKHShareToWBTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3D70001197F51CF00C997D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3D7FFE9197F51CF00C997D0 /* CKHShareToWB */;
+			targetProxy = C3D70000197F51CF00C997D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3D70006197F51CF00C997D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3D70007197F51CF00C997D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3D7000B197F51CF00C997D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C3D7000C197F51CF00C997D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3D7000E197F51CF00C997D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CKHShareToWB.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CKHShareToWB/CKHShareToWB-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CKHShareToWB",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C3D7000F197F51CF00C997D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CKHShareToWB.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CKHShareToWB/CKHShareToWB-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CKHShareToWB",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C3D70011197F51CF00C997D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CKHShareToWB/CKHShareToWB-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CKHShareToWBTests/CKHShareToWBTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C3D70012197F51CF00C997D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CKHShareToWB/CKHShareToWB-Prefix.pch";
+				INFOPLIST_FILE = "CKHShareToWBTests/CKHShareToWBTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3D7000D197F51CF00C997D0 /* Build configuration list for PBXNativeTarget "CKHShareToWB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3D7000E197F51CF00C997D0 /* Debug */,
+				C3D7000F197F51CF00C997D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3D70010197F51CF00C997D0 /* Build configuration list for PBXNativeTarget "CKHShareToWBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3D70011197F51CF00C997D0 /* Debug */,
+				C3D70012197F51CF00C997D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3D7FFE5197F51CF00C997D0 /* Build configuration list for PBXProject "CKHShareToWB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3D7000B197F51CF00C997D0 /* Debug */,
+				C3D7000C197F51CF00C997D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3D7FFE2197F51CF00C997D0 /* Project object */;
+}
