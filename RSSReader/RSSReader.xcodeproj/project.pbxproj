@@ -11,6 +11,7 @@
 		2A66BF551B672A63000A7CB5 /* OPMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66BF541B672A63000A7CB5 /* OPMLParser.m */; };
 		2A66BF581B672F4C000A7CB5 /* OPMLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66BF571B672F4C000A7CB5 /* OPMLItem.m */; };
 		2A66BF5B1B677776000A7CB5 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66BF5A1B677776000A7CB5 /* ArticleDetailViewController.m */; };
+		2A66BF911B67A8E4000A7CB5 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A66BF901B67A8E4000A7CB5 /* ReadMe.txt */; };
 		2AC5A27E1B662D6200088AB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5A27D1B662D6200088AB4 /* main.m */; };
 		2AC5A2811B662D6200088AB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5A2801B662D6200088AB4 /* AppDelegate.m */; };
 		2AC5A2841B662D6200088AB4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5A2831B662D6200088AB4 /* FirstViewController.m */; };
@@ -41,6 +42,7 @@
 		2A66BF571B672F4C000A7CB5 /* OPMLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMLItem.m; sourceTree = "<group>"; };
 		2A66BF591B677776000A7CB5 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
 		2A66BF5A1B677776000A7CB5 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
+		2A66BF901B67A8E4000A7CB5 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		2AC5A2781B662D6200088AB4 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC5A27C1B662D6200088AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC5A27D1B662D6200088AB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		2AC5A26F1B662D6200088AB4 = {
 			isa = PBXGroup;
 			children = (
+				2A66BF901B67A8E4000A7CB5 /* ReadMe.txt */,
 				2AC5A27A1B662D6200088AB4 /* RSSReader */,
 				2AC5A2971B662D6300088AB4 /* RSSReaderTests */,
 				2AC5A2791B662D6200088AB4 /* Products */,
@@ -251,6 +254,7 @@
 				2AC5A28A1B662D6200088AB4 /* Main.storyboard in Resources */,
 				2AC5A28F1B662D6300088AB4 /* LaunchScreen.xib in Resources */,
 				2A66BF521B672A1B000A7CB5 /* blogcn.opml in Resources */,
+				2A66BF911B67A8E4000A7CB5 /* ReadMe.txt in Resources */,
 				2AC5A28C1B662D6300088AB4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
