@@ -15,6 +15,7 @@
 		2A5A694D1B68CBE400720939 /* EffectControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5A694C1B68CBE400720939 /* EffectControlTests.swift */; };
 		2A5DD9A91B68D3A400F9A0DB /* TransformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DD9A81B68D3A400F9A0DB /* TransformController.swift */; };
 		2A5DD9AB1B68DAD800F9A0DB /* tortiter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A5DD9AA1B68DAD800F9A0DB /* tortiter.jpg */; };
+		2AD54DA71B6A0F6A001F3268 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2AD54DA61B6A0F6A001F3268 /* ReadMe.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		2A5A694C1B68CBE400720939 /* EffectControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectControlTests.swift; sourceTree = "<group>"; };
 		2A5DD9A81B68D3A400F9A0DB /* TransformController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformController.swift; sourceTree = "<group>"; };
 		2A5DD9AA1B68DAD800F9A0DB /* tortiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tortiter.jpg; sourceTree = "<group>"; };
+		2AD54DA61B6A0F6A001F3268 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		2A5A69281B68CBE400720939 = {
 			isa = PBXGroup;
 			children = (
+				2AD54DA61B6A0F6A001F3268 /* ReadMe.txt */,
 				2A5A69331B68CBE400720939 /* EffectControl */,
 				2A5A69491B68CBE400720939 /* EffectControlTests */,
 				2A5A69321B68CBE400720939 /* Products */,
@@ -201,6 +204,7 @@
 				2A5DD9AB1B68DAD800F9A0DB /* tortiter.jpg in Resources */,
 				2A5A693C1B68CBE400720939 /* Main.storyboard in Resources */,
 				2A5A69411B68CBE400720939 /* LaunchScreen.xib in Resources */,
+				2AD54DA71B6A0F6A001F3268 /* ReadMe.txt in Resources */,
 				2A5A693E1B68CBE400720939 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
