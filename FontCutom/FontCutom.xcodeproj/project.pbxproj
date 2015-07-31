@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2AD9B2EC1B6B086800008202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9B2EB1B6B086800008202 /* AppDelegate.swift */; };
+		2AD9B2EE1B6B086800008202 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9B2ED1B6B086800008202 /* ViewController.swift */; };
+		2AD9B2F11B6B086800008202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD9B2EF1B6B086800008202 /* Main.storyboard */; };
+		2AD9B2F31B6B086800008202 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD9B2F21B6B086800008202 /* Images.xcassets */; };
+		2AD9B2F61B6B086800008202 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD9B2F41B6B086800008202 /* LaunchScreen.xib */; };
+		2AD9B3021B6B086800008202 /* FontCutomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9B3011B6B086800008202 /* FontCutomTests.swift */; };
+		2AD9B30C1B6B088200008202 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2AD9B30B1B6B088200008202 /* ReadMe.txt */; };
+		2AD9B30E1B6B090100008202 /* PermanentMarker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AD9B30D1B6B090100008202 /* PermanentMarker.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AD9B2FC1B6B086800008202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AD9B2DE1B6B086800008202 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AD9B2E51B6B086800008202;
+			remoteInfo = FontCutom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2AD9B2E61B6B086800008202 /* FontCutom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontCutom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AD9B2EA1B6B086800008202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD9B2EB1B6B086800008202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2AD9B2ED1B6B086800008202 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2AD9B2F01B6B086800008202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2AD9B2F21B6B086800008202 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2AD9B2F51B6B086800008202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2AD9B2FB1B6B086800008202 /* FontCutomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FontCutomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AD9B3001B6B086800008202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD9B3011B6B086800008202 /* FontCutomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCutomTests.swift; sourceTree = "<group>"; };
+		2AD9B30B1B6B088200008202 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		2AD9B30D1B6B090100008202 /* PermanentMarker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PermanentMarker.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AD9B2E31B6B086800008202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AD9B2F81B6B086800008202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AD9B2DD1B6B086800008202 = {
+			isa = PBXGroup;
+			children = (
+				2AD9B30B1B6B088200008202 /* ReadMe.txt */,
+				2AD9B2E81B6B086800008202 /* FontCutom */,
+				2AD9B2FE1B6B086800008202 /* FontCutomTests */,
+				2AD9B2E71B6B086800008202 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2AD9B2E71B6B086800008202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AD9B2E61B6B086800008202 /* FontCutom.app */,
+				2AD9B2FB1B6B086800008202 /* FontCutomTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AD9B2E81B6B086800008202 /* FontCutom */ = {
+			isa = PBXGroup;
+			children = (
+				2AD9B30D1B6B090100008202 /* PermanentMarker.ttf */,
+				2AD9B2EB1B6B086800008202 /* AppDelegate.swift */,
+				2AD9B2ED1B6B086800008202 /* ViewController.swift */,
+				2AD9B2EF1B6B086800008202 /* Main.storyboard */,
+				2AD9B2F21B6B086800008202 /* Images.xcassets */,
+				2AD9B2F41B6B086800008202 /* LaunchScreen.xib */,
+				2AD9B2E91B6B086800008202 /* Supporting Files */,
+			);
+			path = FontCutom;
+			sourceTree = "<group>";
+		};
+		2AD9B2E91B6B086800008202 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AD9B2EA1B6B086800008202 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AD9B2FE1B6B086800008202 /* FontCutomTests */ = {
+			isa = PBXGroup;
+			children = (
+				2AD9B3011B6B086800008202 /* FontCutomTests.swift */,
+				2AD9B2FF1B6B086800008202 /* Supporting Files */,
+			);
+			path = FontCutomTests;
+			sourceTree = "<group>";
+		};
+		2AD9B2FF1B6B086800008202 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AD9B3001B6B086800008202 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AD9B2E51B6B086800008202 /* FontCutom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AD9B3051B6B086800008202 /* Build configuration list for PBXNativeTarget "FontCutom" */;
+			buildPhases = (
+				2AD9B2E21B6B086800008202 /* Sources */,
+				2AD9B2E31B6B086800008202 /* Frameworks */,
+				2AD9B2E41B6B086800008202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FontCutom;
+			productName = FontCutom;
+			productReference = 2AD9B2E61B6B086800008202 /* FontCutom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2AD9B2FA1B6B086800008202 /* FontCutomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AD9B3081B6B086800008202 /* Build configuration list for PBXNativeTarget "FontCutomTests" */;
+			buildPhases = (
+				2AD9B2F71B6B086800008202 /* Sources */,
+				2AD9B2F81B6B086800008202 /* Frameworks */,
+				2AD9B2F91B6B086800008202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AD9B2FD1B6B086800008202 /* PBXTargetDependency */,
+			);
+			name = FontCutomTests;
+			productName = FontCutomTests;
+			productReference = 2AD9B2FB1B6B086800008202 /* FontCutomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AD9B2DE1B6B086800008202 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "广东道一信息科技有限公司";
+				TargetAttributes = {
+					2AD9B2E51B6B086800008202 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					2AD9B2FA1B6B086800008202 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 2AD9B2E51B6B086800008202;
+					};
+				};
+			};
+			buildConfigurationList = 2AD9B2E11B6B086800008202 /* Build configuration list for PBXProject "FontCutom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2AD9B2DD1B6B086800008202;
+			productRefGroup = 2AD9B2E71B6B086800008202 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AD9B2E51B6B086800008202 /* FontCutom */,
+				2AD9B2FA1B6B086800008202 /* FontCutomTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AD9B2E41B6B086800008202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AD9B2F11B6B086800008202 /* Main.storyboard in Resources */,
+				2AD9B2F61B6B086800008202 /* LaunchScreen.xib in Resources */,
+				2AD9B30C1B6B088200008202 /* ReadMe.txt in Resources */,
+				2AD9B30E1B6B090100008202 /* PermanentMarker.ttf in Resources */,
+				2AD9B2F31B6B086800008202 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AD9B2F91B6B086800008202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AD9B2E21B6B086800008202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AD9B2EE1B6B086800008202 /* ViewController.swift in Sources */,
+				2AD9B2EC1B6B086800008202 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AD9B2F71B6B086800008202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AD9B3021B6B086800008202 /* FontCutomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AD9B2FD1B6B086800008202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AD9B2E51B6B086800008202 /* FontCutom */;
+			targetProxy = 2AD9B2FC1B6B086800008202 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2AD9B2EF1B6B086800008202 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AD9B2F01B6B086800008202 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2AD9B2F41B6B086800008202 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AD9B2F51B6B086800008202 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2AD9B3031B6B086800008202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2AD9B3041B6B086800008202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2AD9B3061B6B086800008202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FontCutom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2AD9B3071B6B086800008202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FontCutom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2AD9B3091B6B086800008202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FontCutomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FontCutom.app/FontCutom";
+			};
+			name = Debug;
+		};
+		2AD9B30A1B6B086800008202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FontCutomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FontCutom.app/FontCutom";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AD9B2E11B6B086800008202 /* Build configuration list for PBXProject "FontCutom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AD9B3031B6B086800008202 /* Debug */,
+				2AD9B3041B6B086800008202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AD9B3051B6B086800008202 /* Build configuration list for PBXNativeTarget "FontCutom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AD9B3061B6B086800008202 /* Debug */,
+				2AD9B3071B6B086800008202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2AD9B3081B6B086800008202 /* Build configuration list for PBXNativeTarget "FontCutomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AD9B3091B6B086800008202 /* Debug */,
+				2AD9B30A1B6B086800008202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AD9B2DE1B6B086800008202 /* Project object */;
+}
