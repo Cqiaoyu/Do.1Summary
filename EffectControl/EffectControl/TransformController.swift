@@ -39,6 +39,12 @@ class TransformController: UIViewController {
     var delegate:TransformControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(currentTranform?.a)
+        println(currentTranform?.b)
+        println(currentTranform?.c)
+        println(currentTranform?.d)
+        println(currentTranform?.tx)
+        println(currentTranform?.ty)
         if currentTranform != nil {
             applyTransformToSliders(currentTranform!)
         }
