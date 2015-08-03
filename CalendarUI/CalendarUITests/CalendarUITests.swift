@@ -1,6 +1,6 @@
 //
-//  CalendarTests.swift
-//  CalendarTests
+//  CalendarUITests.swift
+//  CalendarUITests
 //
 //  Created by LJ on 15/8/3.
 //  Copyright (c) 2015年 广东道一信息科技有限公司. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class CalendarTests: XCTestCase {
+class CalendarUITests: XCTestCase {
     
     override func setUp() {
         super.setUp()
