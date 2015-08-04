@@ -11,9 +11,14 @@ import UIKit
 var numberDaysOfMonth:Int!
 class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
 
-    var calendarUI:UICollectionView!
     let calendar = NSCalendar.currentCalendar()
+    
+    var calendarUI:UICollectionView!
+    var numberOfItems:Int!
+    
+    var currentYear:Int!
     var currentMonth:Int!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,33 +41,53 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
         calendarUI.backgroundColor = UIColor.orangeColor()
         addSubview(calendarUI)
         //dataSource
-        numberDaysOfMonth = numberDaysOfMonthInYear(2, inYear: 2015)
+        let daysAndFirstLoacl = numberDaysOfMonthInYear(8, inYear: 2015)
+        numberDaysOfMonth = daysAndFirstLoacl.numberDays
+        let localOfFirstDay = daysAndFirstLoacl.localOfFirstDayInWeek
+        let localOfLastDay = daysAndFirstLoacl.localOfLastDayInWeek
         println("\(numberDaysOfMonth)days")
+        println("local in \(localOfFirstDay)")
+        //reset number of items: get row numbers and then get item numbers
+        numberOfItems = numberDaysOfMonth + (localOfFirstDay - 1) + (7 - localOfLastDay)
         
         
     }
     // MARK: - Data
-    func numberDaysOfMonthInYear(month:Int? , inYear:Int?) -> Int{
-        var desMonth:NSDate!
-        if let m = month{
-            if let y = inYear{
-                let dateStr = "\(y)-0\(m)-01"
-                let formmater = NSDateFormatter()
-                formmater.dateFormat = "yyyy-MM-dd"
-                desMonth = formmater.dateFromString(dateStr)
-            }
-        }else{
-            desMonth = NSDate()
-            
-        }
-        //reset currentMonth
-        currentMonth = calendar.component(NSCalendarUnit.CalendarUnitMonth, fromDate: desMonth)
+    func numberDaysOfMonthInYear(month:Int? , inYear:Int?) -> (numberDays:Int,localOfFirstDayInWeek:Int,localOfLastDayInWeek:Int){
+        //reset currentMonth/currentYear
+        currentYear = inYear
+        currentMonth = month
         println("currentMonth:\(currentMonth)")
+        let calculateOfMonth = localOfTheFirstAndLastDayInMonth(currentMonth)!
         //get numberDaysOfMonth
-        let range = calendar.rangeOfUnit(NSCalendarUnit.CalendarUnitDay, inUnit: NSCalendarUnit.CalendarUnitMonth, forDate: desMonth)
-        return range.length
+        let numberOfDays = calculateOfMonth.numberOfDays
+        //local of the first day
+        let localOfFirst = calculateOfMonth.localOfFirstDayInWeek
+        //local of the last day
+        let localOfLast = calculateOfMonth.localOfLastDayInWeek
+        return (numberOfDays,localOfFirst,localOfLast)
     }
-    
+    //local of the first day in the first week
+    func localOfTheFirstAndLastDayInMonth(month:Int?) -> (numberOfDays:Int,localOfFirstDayInWeek:Int,localOfLastDayInWeek:Int)?{
+        if let m = month{
+            let firstDayStr = "\(currentYear)-0\(m)-01"
+            
+            let formmater = NSDateFormatter()
+            formmater.dateFormat = "yyyy-MM-dd"
+            
+            let firstDate = formmater.dateFromString(firstDayStr)
+            let range = calendar.rangeOfUnit(NSCalendarUnit.CalendarUnitDay, inUnit: NSCalendarUnit.CalendarUnitMonth, forDate: firstDate!)
+            let numberOfDays = range.length
+            
+            let lastDayStr = "\(currentYear)-0\(m)-\(numberOfDays)"
+            let lastDate = formmater.dateFromString(lastDayStr)
+            
+            let localOfFirst = calendar.ordinalityOfUnit(NSCalendarUnit.CalendarUnitDay, inUnit: NSCalendarUnit.CalendarUnitWeekOfMonth, forDate: firstDate!)
+            let localOfLast = calendar.ordinalityOfUnit(NSCalendarUnit.CalendarUnitDay, inUnit: NSCalendarUnit.CalendarUnitWeekOfMonth, forDate: lastDate!)
+            return (numberOfDays,localOfFirst,localOfLast)
+        }
+        return nil
+    }
     
     // MARK: - UICollectionView DataSource Methods
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -72,7 +97,7 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
         return cell
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberDaysOfMonth
+        return numberOfItems
     }
 
 }

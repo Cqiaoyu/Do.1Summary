@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         println(calendar.startOfDayForDate(NSDate()))
         println(calendar.minimumRangeOfUnit(NSCalendarUnit.CalendarUnitDay))
         println(calendar.maximumRangeOfUnit(NSCalendarUnit.CalendarUnitDay))
-        let str = "2015-02-20"
+        let str = "2015-08-01"
         let formmat = NSDateFormatter()
         formmat.dateFormat = "yyyy-MM-dd"
         let february = formmat.dateFromString(str)
