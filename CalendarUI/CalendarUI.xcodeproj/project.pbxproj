@@ -13,6 +13,7 @@
 		2ADA2ADF1B6F4F5D005765A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADA2ADE1B6F4F5D005765A0 /* Images.xcassets */; };
 		2ADA2AE21B6F4F5D005765A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ADA2AE01B6F4F5D005765A0 /* LaunchScreen.xib */; };
 		2ADA2AEE1B6F4F5D005765A0 /* CalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA2AED1B6F4F5D005765A0 /* CalendarUITests.swift */; };
+		2ADA2AFA1B6F67FA005765A0 /* CKHCalendarUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA2AF91B6F67FA005765A0 /* CKHCalendarUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2ADA2AE71B6F4F5D005765A0 /* CalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADA2AEC1B6F4F5D005765A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ADA2AED1B6F4F5D005765A0 /* CalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUITests.swift; sourceTree = "<group>"; };
+		2ADA2AF91B6F67FA005765A0 /* CKHCalendarUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKHCalendarUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				2ADA2AD71B6F4F5D005765A0 /* AppDelegate.swift */,
 				2ADA2AD91B6F4F5D005765A0 /* ViewController.swift */,
+				2ADA2AF91B6F67FA005765A0 /* CKHCalendarUI.swift */,
 				2ADA2ADB1B6F4F5D005765A0 /* Main.storyboard */,
 				2ADA2ADE1B6F4F5D005765A0 /* Images.xcassets */,
 				2ADA2AE01B6F4F5D005765A0 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ADA2AFA1B6F67FA005765A0 /* CKHCalendarUI.swift in Sources */,
 				2ADA2ADA1B6F4F5D005765A0 /* ViewController.swift in Sources */,
 				2ADA2AD81B6F4F5D005765A0 /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +415,7 @@
 				2ADA2AF31B6F4F5D005765A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2ADA2AF41B6F4F5D005765A0 /* Build configuration list for PBXNativeTarget "CalendarUITests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				2ADA2AF61B6F4F5D005765A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
