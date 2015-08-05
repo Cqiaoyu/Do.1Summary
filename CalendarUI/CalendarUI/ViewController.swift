@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         println(calendar.startOfDayForDate(NSDate()))
         println(calendar.minimumRangeOfUnit(NSCalendarUnit.CalendarUnitDay))
         println(calendar.maximumRangeOfUnit(NSCalendarUnit.CalendarUnitDay))
+        println("最小年范围\(calendar.minimumRangeOfUnit(NSCalendarUnit.CalendarUnitYear))")
+        println("最大年范围\(calendar.maximumRangeOfUnit(NSCalendarUnit.CalendarUnitYear))")
         let str = "2015-08-01"
         let formmat = NSDateFormatter()
         formmat.dateFormat = "yyyy-MM-dd"

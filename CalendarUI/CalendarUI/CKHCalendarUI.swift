@@ -47,8 +47,8 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
         calendarUI.registerClass(CalendarCell.self, forCellWithReuseIdentifier: "cell")
         calendarUI.backgroundColor = UIColor.clearColor()
         addSubview(calendarUI)
-        //dataSource
-        let daysAndFirstLoacl = numberDaysOfMonthInYear(nil, inYear: nil)
+        //dataSource -- add regular to control year(1,144683) and month(1,12)
+        let daysAndFirstLoacl = numberDaysOfMonthInYear(13, inYear: 144683)
         numberDaysOfMonth = daysAndFirstLoacl.numberDays
         localOfFirstDay = daysAndFirstLoacl.localOfFirstDayInWeek
         let localOfLastDay = daysAndFirstLoacl.localOfLastDayInWeek
@@ -66,11 +66,19 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
     // MARK: - Data
     func numberDaysOfMonthInYear(month:Int? , inYear:Int?) -> (numberDays:Int,localOfFirstDayInWeek:Int,localOfLastDayInWeek:Int){
         //reset currentMonth/currentYear
-        if let m = month{
-            if let y = inYear {
+        if let m = month, y = inYear{
+            // add regular control range of month and year
+//            assert((m <= 12 && m >= 1) && ( y >= 1 && y <= 144683), "month or year no matches")
+            if (m <= 12 && m >= 1) && ( y >= 1 && y <= 144683) {
                 currentYear = inYear
                 currentMonth = month
+            }else{
+                let today = NSDate()
+                currentYear = calendar.component(NSCalendarUnit.CalendarUnitYear, fromDate: today)
+                currentMonth = calendar.component(NSCalendarUnit.CalendarUnitMonth, fromDate: today)
+                currentDay = calendar.component(NSCalendarUnit.CalendarUnitDay, fromDate: today)
             }
+            
         }else{
             let today = NSDate()
             currentYear = calendar.component(NSCalendarUnit.CalendarUnitYear, fromDate: today)
@@ -116,7 +124,6 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
         cell.backgroundColor = UIColor.clearColor()
         cell.delegate = self
         if indexPath.item >= (localOfFirstDay - 1) && indexPath.item < (localOfFirstDay - 1) + numberDaysOfMonth {
-            println(indexPath.item + 2 - localOfFirstDay)
             cell.title = String(indexPath.item + 2 - localOfFirstDay)
         }
         
@@ -130,6 +137,7 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return numberOfItems
     }
+    //MARK: - cell tap delegate
     func didSelectItem(cell: CalendarCell) {
         if let old = oldIndexPath {
             let oldCell = calendarUI.cellForItemAtIndexPath(oldIndexPath!) as! CalendarCell
@@ -144,8 +152,16 @@ class CalendarCell: UICollectionViewCell {
     var title:String!
     var itemButton:UIButton!
     var delegate:CKHCalendarUIDelegate?
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        itemButton = UIButton.buttonWithType(.Custom) as! UIButton
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func drawRect(rect: CGRect) {
-        itemButton = UIButton(frame: CGRect(x: 0, y: 0, width: rect.width, height: rect.height))
+        itemButton.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
         itemButton.setTitle(title, forState: .Normal)
         itemButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         itemButton.setBackgroundImage(UIImage(named: "selected"), forState: .Selected)
