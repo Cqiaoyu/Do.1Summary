@@ -9,7 +9,12 @@
 import UIKit
 
 var numberDaysOfMonth:Int!
-class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
+
+protocol CKHCalendarUIDelegate : NSObjectProtocol{
+    func didSelectItem(cell:CalendarCell)
+}
+
+class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,CKHCalendarUIDelegate{
 
     let calendar = NSCalendar.currentCalendar()
     
@@ -18,12 +23,14 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
     
     var currentYear:Int!
     var currentMonth:Int!
-    
+    var currentDay:Int!
+    var localOfFirstDay:Int!
+    var oldIndexPath:NSIndexPath?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: 350, height: 350)
-        backgroundColor = UIColor.purpleColor()
+        backgroundColor = UIColor.clearColor()
         
     }
 
@@ -38,25 +45,39 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
         calendarUI.delegate = self
         calendarUI.dataSource = self
         calendarUI.registerClass(CalendarCell.self, forCellWithReuseIdentifier: "cell")
-        calendarUI.backgroundColor = UIColor.orangeColor()
+        calendarUI.backgroundColor = UIColor.clearColor()
         addSubview(calendarUI)
         //dataSource
-        let daysAndFirstLoacl = numberDaysOfMonthInYear(8, inYear: 2015)
+        let daysAndFirstLoacl = numberDaysOfMonthInYear(nil, inYear: nil)
         numberDaysOfMonth = daysAndFirstLoacl.numberDays
-        let localOfFirstDay = daysAndFirstLoacl.localOfFirstDayInWeek
+        localOfFirstDay = daysAndFirstLoacl.localOfFirstDayInWeek
         let localOfLastDay = daysAndFirstLoacl.localOfLastDayInWeek
         println("\(numberDaysOfMonth)days")
         println("local in \(localOfFirstDay)")
         //reset number of items: get row numbers and then get item numbers
         numberOfItems = numberDaysOfMonth + (localOfFirstDay - 1) + (7 - localOfLastDay)
+        //reset oldIndexPath
+        if let today = currentDay {
+            oldIndexPath = NSIndexPath(forItem: currentDay + localOfFirstDay - 2 , inSection: 0)
+        }
         
         
     }
     // MARK: - Data
     func numberDaysOfMonthInYear(month:Int? , inYear:Int?) -> (numberDays:Int,localOfFirstDayInWeek:Int,localOfLastDayInWeek:Int){
         //reset currentMonth/currentYear
-        currentYear = inYear
-        currentMonth = month
+        if let m = month{
+            if let y = inYear {
+                currentYear = inYear
+                currentMonth = month
+            }
+        }else{
+            let today = NSDate()
+            currentYear = calendar.component(NSCalendarUnit.CalendarUnitYear, fromDate: today)
+            currentMonth = calendar.component(NSCalendarUnit.CalendarUnitMonth, fromDate: today)
+            currentDay = calendar.component(NSCalendarUnit.CalendarUnitDay, fromDate: today)
+        }
+        
         println("currentMonth:\(currentMonth)")
         let calculateOfMonth = localOfTheFirstAndLastDayInMonth(currentMonth)!
         //get numberDaysOfMonth
@@ -91,25 +112,52 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
     
     // MARK: - UICollectionView DataSource Methods
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CalendarCell
-        cell.backgroundColor = UIColor.greenColor()
-        cell.title = String(indexPath.item + 1)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CalendarCell
+        cell.backgroundColor = UIColor.clearColor()
+        cell.delegate = self
+        if indexPath.item >= (localOfFirstDay - 1) && indexPath.item < (localOfFirstDay - 1) + numberDaysOfMonth {
+            println(indexPath.item + 2 - localOfFirstDay)
+            cell.title = String(indexPath.item + 2 - localOfFirstDay)
+        }
+        
+        if let selectedPath = oldIndexPath {
+            if indexPath.item == selectedPath.item{
+                cell.itemButton.selected = true
+            }
+        }
         return cell
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return numberOfItems
+    }
+    func didSelectItem(cell: CalendarCell) {
+        if let old = oldIndexPath {
+            let oldCell = calendarUI.cellForItemAtIndexPath(oldIndexPath!) as! CalendarCell
+            oldCell.itemButton.selected = false
+        }
+        oldIndexPath = calendarUI.indexPathForCell(cell)
     }
 
 }
 
 class CalendarCell: UICollectionViewCell {
     var title:String!
+    var itemButton:UIButton!
+    var delegate:CKHCalendarUIDelegate?
     override func drawRect(rect: CGRect) {
-        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: rect.width, height: rect.height))
-        titleLabel.text = title
-        titleLabel.textAlignment = .Center
-        addSubview(titleLabel)
-        
+        itemButton = UIButton(frame: CGRect(x: 0, y: 0, width: rect.width, height: rect.height))
+        itemButton.setTitle(title, forState: .Normal)
+        itemButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        itemButton.setBackgroundImage(UIImage(named: "selected"), forState: .Selected)
+        itemButton.addTarget(self, action: "itemSelected", forControlEvents: UIControlEvents.TouchUpInside)
+        contentView.addSubview(itemButton)
+        layoutIfNeeded()
+    }
+    func itemSelected(){
+        itemButton.selected = true
+        if let _delegate = delegate{
+            _delegate.didSelectItem(self)
+        }
     }
 }
 
