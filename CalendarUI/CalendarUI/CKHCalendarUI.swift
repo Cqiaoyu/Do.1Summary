@@ -29,7 +29,7 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: 350, height: 350)
+        self.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: 320, height: 350)
         backgroundColor = UIColor.clearColor()
         
     }
@@ -40,15 +40,10 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
     }
     
     override func drawRect(rect: CGRect) {
-        //calendarUI
-        calendarUI = UICollectionView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height - 50), collectionViewLayout: CalendarCellLayout())
-        calendarUI.delegate = self
-        calendarUI.dataSource = self
-        calendarUI.registerClass(CalendarCell.self, forCellWithReuseIdentifier: "cell")
-        calendarUI.backgroundColor = UIColor.clearColor()
-        addSubview(calendarUI)
+        //UI
+        uiInit()
         //dataSource -- add regular to control year(1,144683) and month(1,12)
-        let daysAndFirstLoacl = numberDaysOfMonthInYear(13, inYear: 144683)
+        let daysAndFirstLoacl = numberDaysOfMonthInYear(nil, inYear: 12)
         numberDaysOfMonth = daysAndFirstLoacl.numberDays
         localOfFirstDay = daysAndFirstLoacl.localOfFirstDayInWeek
         let localOfLastDay = daysAndFirstLoacl.localOfLastDayInWeek
@@ -63,6 +58,27 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
         
         
     }
+    // MARK: - UI-init
+    func uiInit(){
+        //calendarUI
+        calendarUI = UICollectionView(frame: CGRect(x: 0, y: 10, width: frame.width, height: frame.height - 50), collectionViewLayout: CalendarCellLayout())
+        calendarUI.delegate = self
+        calendarUI.dataSource = self
+        calendarUI.registerClass(CalendarCell.self, forCellWithReuseIdentifier: "cell")
+        calendarUI.backgroundColor = UIColor.clearColor()
+        addSubview(calendarUI)
+        //weekdaySymbols UI
+        let weekdaySymbols = calendar.shortWeekdaySymbols
+        for var item=0; item<weekdaySymbols.count; item++ {
+            let symbolLabel = UILabel(frame: CGRect(x: (item%7)*320/7, y: 0, width: 350/7, height: 10))
+            symbolLabel.font = UIFont.systemFontOfSize(14)
+            symbolLabel.textAlignment = .Center
+            symbolLabel.text = weekdaySymbols[item] as? String
+            addSubview(symbolLabel)
+        }
+    }
+    
+    
     // MARK: - Data
     func numberDaysOfMonthInYear(month:Int? , inYear:Int?) -> (numberDays:Int,localOfFirstDayInWeek:Int,localOfLastDayInWeek:Int){
         //reset currentMonth/currentYear
@@ -125,6 +141,7 @@ class CKHCalendarUI: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
         cell.delegate = self
         if indexPath.item >= (localOfFirstDay - 1) && indexPath.item < (localOfFirstDay - 1) + numberDaysOfMonth {
             cell.title = String(indexPath.item + 2 - localOfFirstDay)
+            cell.isValiable = true
         }
         
         if let selectedPath = oldIndexPath {
@@ -152,6 +169,7 @@ class CalendarCell: UICollectionViewCell {
     var title:String!
     var itemButton:UIButton!
     var delegate:CKHCalendarUIDelegate?
+    var isValiable:Bool!
     override init(frame: CGRect) {
         super.init(frame: frame)
         itemButton = UIButton.buttonWithType(.Custom) as! UIButton
@@ -170,10 +188,15 @@ class CalendarCell: UICollectionViewCell {
         layoutIfNeeded()
     }
     func itemSelected(){
-        itemButton.selected = true
-        if let _delegate = delegate{
-            _delegate.didSelectItem(self)
+        if let valiable = isValiable{
+            if valiable == true{
+                itemButton.selected = true
+                if let _delegate = delegate{
+                    _delegate.didSelectItem(self)
+                }
+            }
         }
+        
     }
 }
 
